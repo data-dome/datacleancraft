@@ -1,0 +1,4 @@
+{
+    "annual_salary": "float",
+    "dob": "datetime"
+}

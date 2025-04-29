@@ -1,0 +1,8 @@
+{
+    "Name": "full_name",
+    "Email": "email_address",
+    "Phone": "phone_number",
+    "Birthdate": "dob",
+    "Salary": "annual_salary",
+    "Comments": "notes"
+}
