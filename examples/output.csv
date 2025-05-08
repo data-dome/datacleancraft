@@ -1,0 +1,4 @@
+Name,Email,Phone,Birthdate,Salary,Comments,anomaly_score,is_anomaly
+redact,redact,redact,redact,55000,excellent performance,3025000000.0,True
+redact,redact,redact,redact,67000,promotion candidate,4489000000.0,True
+foo bar,redact,redact,redact,72000,need improvement,5184000000.0,True

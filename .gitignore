@@ -80,7 +80,7 @@ venv.bak/
 Thumbs.db
 
 # CSV files or data examples (optional)
-examples/*.csv
+#examples/*.csv
 
 # Project-specific build artifacts (if any)
 dataCleanCraft.egg-info/
