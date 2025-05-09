@@ -1,5 +1,7 @@
 # 📦 datacleancraft
 
+**Note** It works with python > 3.8 < 3.13 due to spacy depedency on numpy 1.26.4 which is not supported by python version > 3.13.   
+
 **datacleancraft** is a flexible, privacy-aware, local-first **Data Cleaning and Structuring** toolkit.  
 It enables ingestion, preprocessing, schema mapping, anomaly detection, and exporting — with optional GPT/LLM enhancement.
 
