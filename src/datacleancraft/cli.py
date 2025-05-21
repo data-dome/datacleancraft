@@ -13,7 +13,9 @@ from datacleancraft.utils.logger import default_logger
 @click.option('--export-format', type=click.Choice(['csv', 'json']), default='csv', show_default=True, help='Export format.')
 @click.option('--anomaly-threshold', type=float, default=0.1, show_default=True, help='Threshold for anomaly detection.')
 @click.option('--column-mapping', type=str, default=None, help='Optional column mapping in format old1:new1,old2:new2')
-def run_pipeline(input_path, output_path, export_format, anomaly_threshold, column_mapping):
+@click.option('--redact-pii', type=bool, default=True, help='Enable or disable PII redaction.')
+@click.option('--anomaly-detection', type=bool, default=True, help='Enable or disable anomaly detection.')
+def run_pipeline(input_path, output_path, export_format, anomaly_threshold, column_mapping, redact_pii, anomaly_detection):
     """
     CLI entry point for running the DataCleanCraft cleaning pipeline.
     """
@@ -29,6 +31,9 @@ def run_pipeline(input_path, output_path, export_format, anomaly_threshold, colu
         export_format=export_format,
         column_mapping=mapping_dict,
         anomaly_threshold=anomaly_threshold,
+        redact_pii_enabled=redact_pii, 
+        anomaly_detection_enabled=anomaly_detection,
+
     )
 
     pipeline.run()

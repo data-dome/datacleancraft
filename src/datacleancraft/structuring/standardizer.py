@@ -1,83 +1,8 @@
-# """
-# Standardizer Module
+"""
+Standardizer Module
 
-# Functions to normalize dates, categorical values, and other common field formats.
-# """
-
-# import pandas as pd
-# import numpy as np
-# from typing import List, Dict, Union
-# from dateutil import parser as date_parser
-
-# class Standardizer:
-#     def __init__(self):
-#         pass
-
-#     def standardize_dates(self, df: pd.DataFrame, date_columns: List[str]) -> pd.DataFrame:
-#         """
-#         Standardize date columns to ISO 8601 format (YYYY-MM-DD).
-
-#         Args:
-#             df (pd.DataFrame): Input dataframe.
-#             date_columns (List[str]): List of columns to standardize.
-
-#         Returns:
-#             pd.DataFrame: DataFrame with standardized date columns.
-#         """
-#         for col in date_columns:
-#             df[col] = df[col].apply(self._parse_date)
-#         return df
-
-#     def _parse_date(self, value: Union[str, pd.Timestamp]) -> Union[str, float]:
-#         """
-#         Helper to parse individual date value.
-
-#         Args:
-#             value: Input date value.
-
-#         Returns:
-#             str or np.nan: Standardized ISO date string or np.nan if invalid.
-#         """
-#         if pd.isnull(value):
-#             return np.nan
-#         try:
-#             parsed = date_parser.parse(str(value), fuzzy=True)
-#             return parsed.date().isoformat()
-#         except Exception:
-#             return np.nan
-
-#     def standardize_categories(self, df: pd.DataFrame, category_mappings: Dict[str, Dict[str, str]]) -> pd.DataFrame:
-#         """
-#         Standardize categorical columns using mapping dictionaries.
-
-#         Args:
-#             df (pd.DataFrame): Input dataframe.
-#             category_mappings (Dict[str, Dict[str, str]]): 
-#                 Column-wise mappings. 
-#                 Example: {"Gender": {"M": "Male", "F": "Female"}}
-
-#         Returns:
-#             pd.DataFrame: DataFrame with standardized categories.
-#         """
-#         for col, mapping in category_mappings.items():
-#             if col in df.columns:
-#                 df[col] = df[col].map(mapping).fillna(df[col])
-#         return df
-#     def standardize(self, df: pd.DataFrame, date_columns: List[str], category_mappings: Dict[str, Dict[str, str]]) -> pd.DataFrame:
-#         """
-#         Standardize the DataFrame by applying date and category standardizations.
-
-#         Args:
-#             df (pd.DataFrame): Input dataframe.
-#             date_columns (List[str]): List of columns to standardize as dates.
-#             category_mappings (Dict[str, Dict[str, str]]): Column-wise mappings for categories.
-
-#         Returns:
-#             pd.DataFrame: Fully standardized DataFrame.
-#         """
-#         df = self.standardize_dates(df, date_columns)
-#         df = self.standardize_categories(df, category_mappings)
-#         return df
+Functions to normalize dates, categorical values, and other common field formats.
+"""
 
 import pandas as pd
 import numpy as np

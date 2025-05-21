@@ -1,38 +1,3 @@
-# from fastapi import FastAPI, UploadFile, File
-# from fastapi.responses import JSONResponse
-# import pandas as pd
-# from io import StringIO
-
-# from datacleancraft.pipeline import run_pipeline
-
-# app = FastAPI(title="DataCleanCraft API", version="0.1.0")
-
-# # Initialize your cleaning pipeline
-# pipeline = run_pipeline()
-
-# @app.post("/clean_csv/")
-# async def clean_csv(file: UploadFile = File(...)):
-#     try:
-#         contents = await file.read()
-#         decoded = contents.decode('utf-8')
-#         df = pd.read_csv(StringIO(decoded))
-        
-#         cleaned_df = run_pipeline(df)
-        
-#         # Return first few rows as a sample
-#         return JSONResponse(
-#             content={"preview": cleaned_df.head(5).to_dict(orient="records")},
-#             status_code=200
-#         )
-#     except Exception as e:
-#         return JSONResponse(
-#             content={"error": str(e)},
-#             status_code=500
-#         )
-
-# @app.get("/health/")
-# def health_check():
-#     return {"status": "ok"}
 """
 api.py - FastAPI service for DataCleanCraft pipeline.
 """

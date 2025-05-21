@@ -47,20 +47,6 @@ class PIIRedactor:
 
         return redacted
 
-    # def redact_dataframe(self, df: pd.DataFrame, columns: list) -> pd.DataFrame:
-    #     """
-    #     Redact PII from specified DataFrame columns.
-
-    #     Args:
-    #         df (pd.DataFrame): Input DataFrame.
-    #         columns (list): Columns to redact.
-
-    #     Returns:
-    #         pd.DataFrame: Redacted DataFrame.
-    #     """
-    #     for col in columns:
-    #         df[col] = df[col].apply(self.redact_text)
-    #     return df
     def redact_dataframe(self, df: pd.DataFrame, columns: list = None) -> pd.DataFrame:
         """
         Redact PII from specified DataFrame columns or all text columns if none are provided.

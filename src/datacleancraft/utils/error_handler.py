@@ -12,27 +12,6 @@ class PipelineError(Exception):
     """Custom exception class for pipeline-related errors."""
     pass
 
-# def handle_exception(exc: Exception, fatal: bool = False) -> None:
-#     """
-#     Handle an exception uniformly across the pipeline.
-
-#     Args:
-#         exc (Exception): Exception object.
-#         fatal (bool): Whether the exception should terminate the program.
-#     """
-#     logger.error(f"[ErrorHandler] An error occurred: {str(exc)}", exc_info=True)
-
-#     if fatal:
-#         logger.critical("[ErrorHandler] Fatal error encountered. Exiting pipeline.", exc_info=True)
-#         sys.exit(1)
-
-
-# # Assuming logger is already initialized somewhere globally
-# import sys
-# import functools
-# import logging
-
-#logger = logging.getLogger("datacleancraft")
 
 def handle_exception(func=None, *, fatal=False):
     """
