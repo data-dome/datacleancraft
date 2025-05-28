@@ -100,7 +100,10 @@ class TextCleaner:
         # Keep only printable, alphanumeric and space characters
         text = "".join(c for c in text if c in string.printable and (c.isalnum() or c.isspace()))
 
-        return text.strip()
+        text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
+
+        # Remove extra spaces
+        return " ".join(text.split())
 
     def clean_text_dataframe(self,
         df: pd.DataFrame,
