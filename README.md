@@ -46,7 +46,7 @@ cd datacleancraft
 # Install
 pip install -e .
 
-# OR install dependencies only
+# install dependencies only
 pip install -r requirements.txt
 
 ## 🛠 Usage
