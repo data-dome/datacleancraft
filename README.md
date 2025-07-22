@@ -119,6 +119,11 @@ More advanced PII detection
 Better CLI options
 
 ## 🌟 Future Roadmap
+
+ Custom training the autoencoder on anomaly detection.
+
+ Falling back on GPT / Gemini LLMs instead of the local Spacy model to boost accuracy, handle different cultural aspects, and cover a wider range of exceptional cases.
+
  Native Parquet & Feather file support
 
  PDF/Text file ingestion using OCR
